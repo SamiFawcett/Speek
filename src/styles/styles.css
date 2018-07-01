@@ -1,0 +1,31 @@
+#nav-title{
+	text-align:center;
+	color: white;
+	font-family: One Day;
+	font-size: 55px;
+}
+
+#map{
+	height:400px;
+	width:100%;
+}
+
+
+@font-face{
+	font-family:"Polya";
+	src:url(Fonts/Polya_Font/POLYA.otf) format("opentype");
+}
+
+@font-face{
+	font-family:"One Day";
+	src:url(Fonts/ONEDAY/ONEDAY.otf) format("opentype");
+}
+
+html{
+height:100%;
+}
+
+body{
+	height:90%;
+	background: -webkit-linear-gradient(top, #280f36 1%,#c86b98 100%); /* Chrome10-25,Safari5.1-6 */
+}
