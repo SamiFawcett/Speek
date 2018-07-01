@@ -3,11 +3,27 @@
 	color: white;
 	font-family: One Day;
 	font-size: 55px;
+	left: 50%;
 }
 
 #map{
-	height:400px;
-	width:100%;
+	height:450px;
+	width:50%;
+	left: 25%;
+
+}
+
+#floating-panel{
+	position: absolute;
+    top: 210px;
+    left: 47.9%;
+    z-index: 5;
+    background-color: #fff;
+    color: -webkit-linear-gradient(top, #280f36 1%,#c86b98 100%);
+    padding: 10px;
+    border: 1px solid #999;
+    text-align: center;
+    font-family: 'One Day','sans-serif';
 }
 
 

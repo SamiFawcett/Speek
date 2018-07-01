@@ -19,6 +19,7 @@ function initMap() {
   } else {
   	handleLocationError(false, infoWindow, map.getCenter())
   }
+  start();
 }
 
 
@@ -29,7 +30,35 @@ function findPeople(){
 	var directiosnsDisplay = new google.maps.DirectionsRenderer({map:map});
 	var stepDisplay = new google.maps.InfoWindow;
 
-	calculateAndDisplayRoute(
-
-	)
+	var onChangeHandler = function(){
+		calculateAndDisplayRoute(directionsDisplay, directionsService, markerArray, stepDisplay, map);
+	};
+	document.getElementById('start').addEventListener('change', onChangeHandler);
+	document.getElementById('search').addEventListener('change', onChangeHandler);
 }
+
+function calculateAndDisplayRoute(directionsDisplay, directionsService, markerArray, stepDisplay, map){
+	for(var i = 0; i < markerArray.length; i++){
+		markerArray[i].setMap(null);
+	}
+	directionsService.route({
+		origin: document.getElementById('start').value,
+		destination: document.getElementById('search').value,
+		travelMode: 'WALKING'
+	}, function(response, status){
+		if(status === 'OK'){
+			//showSteps(directionResult, markerArray, stepDisplay, map);
+		}
+	});
+}
+
+function start(){
+	document.getElementById('floating-panel').onclick = function(){
+		document.getElementById('begin-bttn').innerHTML = "Loading..."
+		setTimeout(function() {
+		document.getElementById('floating-panel').style.visibility = 'hidden';
+		}, 3000);
+	}
+}
+
+	
