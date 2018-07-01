@@ -1,0 +1,2 @@
+# Speek
+Individuals have cellular devices that allow them to connect with others but social and human connection isn't something that travels through wires as bits, connection is the talking, the shaking hands, the sometimes nervous, shy starts or the frantic, ecstatic starts. This is what Speek is for. Cellular devices on roam will interact with other phones and compare inputted interests and hobbies.
