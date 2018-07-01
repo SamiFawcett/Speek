@@ -30,5 +30,6 @@ function findPeople(){
 	var stepDisplay = new google.maps.InfoWindow;
 
 	calculateAndDisplayRoute(
-		)
+
+	)
 }
