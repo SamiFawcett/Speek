@@ -1,4 +1,17 @@
+function API(type, src){
+	var tag = document.createElement('script');
+	tag.src = this.src;
+	tag.type = this.type;
+	$('body').append(tag);
+}
+
+function initKeys(){
+	var google_maps = new API('text/javascript', 'https://maps.googleapis.com/maps/api/js?key=' + config.GOOGLE_MAP_KEY + '&callback=initMap');
+
+}
+
 function initMap() {
+  initKeys();
   var map = new google.maps.Map(document.getElementById('map'), {zoom: 20, center: {lat: -35, lng: 150}});
   var infoWindow = new google.maps.InfoWindow;
   if(navigator.geolocation){
@@ -61,4 +74,9 @@ function start(){
 	}
 }
 
-	
+
+function firebase(){
+			
+}
+
+	initMap();
